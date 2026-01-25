@@ -1,0 +1,35 @@
+{
+    "name": "exechub-evaluator-service",
+    "version": "1.0.0",
+    "description": "ExecHub evaluator service",
+    "license": "ISC",
+    "author": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "npx tsc",
+        "watch": "npx tsc -w",
+        "prestart": "npm run build",
+        "start": "npx nodemon dist/index.js",
+        "dev": "npx concurrently --kill-others \"npm run watch\" \"npm start\""
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.5",
+        "nodemon": "^3.1.10",
+        "prettier": "^3.6.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "@bull-board/api": "^6.15.0",
+        "@bull-board/express": "^6.15.0",
+        "@types/dockerode": "^3.3.47",
+        "body-parser": "^2.2.1",
+        "bullmq": "^5.63.0",
+        "concurrently": "^9.2.1",
+        "dockerode": "^4.0.9",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "ioredis": "^5.8.2",
+        "zod": "^4.2.1"
+    }
+}
