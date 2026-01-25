@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:4000
+@contentType = application/json
+
+
+
+## post Request
+POST {{baseUrl}}/sendPayload
+Content-Type: {{contentType}}
+
+{
+   "userId": "143",
+   "payload": {
+      "success": true,
+      "error": {},
+      "score": 100
+   }
+}
